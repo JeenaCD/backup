@@ -1,0 +1,56 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+input placeholder { 
+      color:    #FFF;
+  }
+
+.clearfix{
+  margin-left: 10px;
+}
+.carousel-inner > .carousel-item > img {
+    margin-top: 8%;
+    height: 50vh;
+  }
+
+.container-fluid > .row > .mymargin{
+  margin-top: 10%;
+  padding-left: 40%;
+}
+
+
+.has-bg-img > .bg-img {
+  background-size: cover;
+}
+
+.fa-brands{
+  font-size: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+}
+
+ul{
+  list-style-type: square;
+}
+
+@keyframes example {
+  from {background-color: white}
+  to {background-color: rgb(129, 212, 165);}
+}
+body{animation-timing-function: ease-in-out;}
+/* The element to apply the animation to */
+body{
+background-color: white;
+animation-name: example;
+animation-duration: 5s;
+animation-iteration-count: infinite;
+}
+
+
+
