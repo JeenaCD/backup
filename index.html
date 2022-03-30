@@ -10,17 +10,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/f1c1b376f3.js" crossorigin="anonymous"></script>
-    <style>.carousel-inner > .item > img { width:100%; height: 300px; } </style>
+
     <style>
-      marquee{
-        font-size: 25px;
-        font-weight: 200;
-        color: black;
-        background-color: rgb(101, 163, 128);
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        text-shadow: 2px 2px 1px rgb(91, 37, 153);
-  
-      }
+     .carousel .carousel-item {
+      height: 550px;
+    }
+
+    .carousel-item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 550px;
+    } 
+    
+    </style>
+    <style>
       p{
         text-align: justify;
         text-indent: 30px;
@@ -33,7 +38,7 @@
    
 <!-- navtab starts here-->
   <div  >
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-success  bg-gradient bg-opacity-35">
+    <nav class="navbar fixed-top navbar-expand-lg bg-gradient bg-opacity-10" style="background-color: rgb(33, 55, 155);">
       <div class="container-fluid">
           <img src="./images/kerala_tourism_logo.jpg" alt="" width="100" height="90" >
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,35 +47,35 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active color-me"  aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./explore.html">Explore</a>
+                    <a class="nav-link color-my" href="./explore.html">Explore</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./districts.html">Districts</a>
+                    <a class="nav-link color-my" href="./districts.html">Districts</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle color-my" href="" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Top Destinations
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="./thiruvananthapuram.html">Thiruvananthapuram</a></li>
-                      <li><a class="dropdown-item" href="./kollam.html">Kollam</a></li>
-                      <li><a class="dropdown-item" href="./pathanamthitta.html">Pathanamthitta</a></li>
-                      <li><a class="dropdown-item" href="./idukki.html">Idukki</a></li>
-                      <li><a class="dropdown-item" href="./wayanad.html">Wayanad</a></li>
+                      <li><a class="dropdown-item color-my" href="./thiruvananthapuram.html">Thiruvananthapuram</a></li>
+                      <li><a class="dropdown-item color-my" href="./kollam.html">Kollam</a></li>
+                      <li><a class="dropdown-item color-my" href="./pathanamthitta.html">Pathanamthitta</a></li>
+                      <li><a class="dropdown-item color-my" href="./idukki.html">Idukki</a></li>
+                      <li><a class="dropdown-item color-my" href="./wayanad.html">Wayanad</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./login.html">LOGIN</a>
+                    <a class="nav-link color-my" href="./login.html">LOGIN</a>
                   </li>
                 </ul>
               </div>
             
             <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success btn-light" type="submit">Search</button>
+            <button class="btn btn-outline-success btn-light " type="submit" style="color: black;">Search</button>
             </form>
           </div>
         </nav>
@@ -80,21 +85,20 @@
 
 <!-- carousel starts here -->
 
- <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+ <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
+   <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./images/nature.jpg" class="d-sm-block w-100 " alt="nature">
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./images/Trivandrum 1.jpg"  class="d-sm-block w-100 " alt="Trivandrum">
+      <div class="carousel-item">
+        <img src="./images/Sasthamcotta.jpg"  class="d-sm-block w-100 " alt="Kollam">
       </div>
       <div class="carousel-item">
-        <img src="./images/kollam.jpg" class="d-sm-block w-100 " alt="Kollam">
+        <img src="./images/bekal.jpg" class="d-sm-block w-100 " alt="Pathanamthitta">
       </div>
-      <div class="carousel-item">
-        <img src="./images/munnar.jpg" class="d-sm-block w-100 " alt="munnar">
+      
+      <div class="carousel-content">
+        <p>Welcome to God’s Own Country</p>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -108,11 +112,11 @@
   </div>
    <!-- carousel ends here -->
 
-   <marquee>Welcome to God's Own Country</marquee>
+   <!-- <marquee>Welcome to God's Own Country</marquee> -->
 
 
 <!-- grid  -->
-   <div class="clearfix" style="margin-top: -9px;">
+   <div class="clearfix" style="margin-top: 0px;">
     <img src="./images/art-forms.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="artform">
   
     <p><br>

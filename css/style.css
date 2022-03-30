@@ -7,6 +7,46 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
+
+  .navbar > .container-fluid> .collapse > .navbar-nav > .nav-item > .color-me{
+    color:black;
+} 
+
+.navbar > .container-fluid> .collapse > .navbar-nav > .nav-item > .color-my{
+  color:rgba(0, 0, 0, 0.5);
+}
+
+
+.carousel-content {
+  position: absolute;
+  text-align: right;
+  font-size: 40px;
+  font-weight: 600;
+  bottom: 60%;
+  left: 50%;
+  z-index: 20;
+  color: white;
+  text-shadow: 4px 4px 2px black;
+
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%; 
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: rgba(255, 255, 255, 0); 
+
+}
+
+ @keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+} 
+
 input placeholder { 
       color:    #FFF;
   }
@@ -14,10 +54,13 @@ input placeholder {
 .clearfix{
   margin-left: 10px;
 }
+
+
+
 .carousel-inner > .carousel-item > img {
     margin-top: 8%;
     height: 50vh;
-  }
+  } 
 
 .container-fluid > .row > .mymargin{
   margin-top: 10%;
@@ -39,18 +82,18 @@ ul{
   list-style-type: square;
 }
 
-@keyframes example {
-  from {background-color: white}
-  to {background-color: rgb(129, 212, 165);}
-}
+/* @keyframes example {
+  from {background-color: rgb(217, 209, 240)}
+  to {background-color:  rgb(33, 55, 155);}
+} 
 body{animation-timing-function: ease-in-out;}
 /* The element to apply the animation to */
-body{
+/* body{
 background-color: white;
 animation-name: example;
 animation-duration: 5s;
 animation-iteration-count: infinite;
-}
+} */ 
 
 
 
