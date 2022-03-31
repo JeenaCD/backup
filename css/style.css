@@ -13,7 +13,7 @@ body{
 } 
 
 .navbar > .container-fluid> .collapse > .navbar-nav > .nav-item > .color-my{
-  color:rgba(0, 0, 0, 0.5);
+  color:whitesmoke;
 }
 
 
@@ -50,6 +50,10 @@ input placeholder {
   padding-left: 40%;
 }
 
+.card > .card-body {
+  background-color: rgb(33, 55, 155);
+  color: white;
+}
 
 .has-bg-img > .bg-img {
   background-size: cover;

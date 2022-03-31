@@ -12,13 +12,22 @@
     <script src="https://kit.fontawesome.com/f1c1b376f3.js" crossorigin="anonymous"></script>
     <style>
     
-    h1{
-      text-align: center;
-      color: rgb(46, 18, 124);
+    h4{
+      margin-right: 70%;
+      margin-left: 10%;
+      background-color:rgb(33, 55, 155);;
+      text-align: left;
+      color: white;
       text-shadow: 2px 2px 1px blueviolet;
+      
     }
     p{
       text-align: justify;
+    }
+
+    .row > .card{
+      background-color: rgb(33, 55, 155);;
+      color: white;
     }
     </style>
     
@@ -27,7 +36,8 @@
 <body>
     <!-- navtab starts here-->
    <div  >
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-gradient bg-opacity-10" style="background-color: rgb(33, 55, 155);" >
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-gradient bg-opacity-10" style="background-color: rgb(33, 55, 155);font-size: 18px;
+    font-weight: 600; ">
       <div class="container-fluid">
           <img src="./images/kerala_tourism_logo.jpg" alt="" width="100" height="90" >
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,35 +46,34 @@
               <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                    <a class="nav-link color-my" aria-current="page" href="./index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./explore.html">Explore</a>
+                    <a class="nav-link color-my" href="./explore.html">Explore</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link active" href="#">Districts</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle color-my" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Top Destinations
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="./thiruvananthapuram.html">Thiruvananthapuram</a></li>
-                      <li><a class="dropdown-item" href="./kollam.html">Kollam</a></li>
-                      <li><a class="dropdown-item" href="./alapuzha.html">Alappuzha</a></li>
-                      <li><a class="dropdown-item" href="./idukki.html">Idukki</a></li>
-                      <li><a class="dropdown-item" href="./wayanad.html">Wayanad</a></li>
+                      <li><a class="dropdown-item color-my" href="./thiruvananthapuram.html">Thiruvananthapuram</a></li>
+                      <li><a class="dropdown-item color-my" href="./kollam.html">Kollam</a></li>
+                      <li><a class="dropdown-item color-my" href="./alapuzha.html">Alappuzha</a></li>
+                      <li><a class="dropdown-item color-my" href="./idukki.html">Idukki</a></li>
+                      <li><a class="dropdown-item color-my" href="./wayanad.html">Wayanad</a></li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="./login.html">LOGIN</a>
+                    <a class="nav-link color-my" href="./login.html">LOGIN</a>
                   </li>
                 </ul>
               </div>
             <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success btn-light" type="submit">Search</button>
-            </form>
+            <button class="btn btn-light " type="submit" style="color: black;">Search</button>
         </div>
     </nav>
 </div>
@@ -72,8 +81,13 @@
 
 <!-- list of districts starts here -->
 <div class="container-fluid" style="margin-top:10%">
-  <h1>DISTRICTS of KERALA</h1>
-  <br>
+  <h4>DISTRICTS of KERALA</h4>
+  <p style="font-size: 15px; margin-top: 15px;text-align: center; text-shadow: 1px 1px 1px rgb(24, 138, 204);">
+    Kerala has 14 separate districts, each famous for its own set of unique destinations and 
+    features. Following is a list of that can be used to gain information on each individual 
+    district based on your preference. This is to aid you in the process of gaining more data 
+    regarding the areas you would like to visit and plan your trip accordingly.
+  </p>
   <div class="row">
    <div class="card mb-3" style="max-width: 540px; margin-left: 5%;">
     <div class="row g-0">
@@ -83,7 +97,7 @@
       <div class="col-md-5">
         <div class="card-body">
           <h5>
-          <a href="./thiruvananthapuram.html" class="card-title btn btn-success">Thiruvananthapuram</a></h5>
+          <a href="./thiruvananthapuram.html" class="card-title btn btn-outline-dark" style="color:white;">Thiruvananthapuram</a></h5>
           <p class="card-text">Thiruvananthapuram is the 'Capital City of Kerala'. </p>
         </div>
       </div>
@@ -96,7 +110,7 @@
       </div>
       <div class="col-md-5">
         <div class="card-body">
-          <h5><a href="./kollam.html" class="card-title btn btn-success">Kollam</a></h5>
+          <h5><a href="./kollam.html" class="card-title btn btn-outline-dark" style="color:white;">Kollam</a></h5>
           <p class="card-text">Kollam is the capital of 'Kerala's cashew industry'.</p>
         </div>
       </div>
@@ -111,7 +125,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="./pathanamthitta.html" class="card-title btn btn-success">Pathanamthitta</a></h5>
+           <h5><a href="./pathanamthitta.html" class="card-title btn btn-outline-dark"style="color:white;">Pathanamthitta</a></h5>
            <p class="card-text">Pathanamthitta is known as the 'Pilgrim Capital of Kerala'.</p>
           </div>
        </div>
@@ -124,7 +138,7 @@
        </div>
        <div class="col-md-5">
         <div class="card-body">
-          <h5><a href="#" class="card-title btn btn-success">Alappuzha</a></h5>
+          <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Alappuzha</a></h5>
           <p class="card-text">Alappuzha is referred as 'The Venice of the East'.</p>
         </div>
        </div>
@@ -139,7 +153,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="#" class="card-title btn btn-success">Kottayam</a></h5>
+           <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Kottayam</a></h5>
            <p class="card-text">Kottayam is the 'Letter Capital of Kerala'.</p>
          </div>
        </div>
@@ -152,7 +166,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="./idukki.html" class="card-title btn btn-success">Idukki</a></h5>
+           <h5><a href="./idukki.html" class="card-title btn btn-outline-dark" style="color:white;">Idukki</a></h5>
            <p class="card-text">Idukki is referred as 'The Spice Garden of Kerala'</p>
          </div>
        </div>
@@ -167,7 +181,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="#" class="card-title btn btn-success">Ernakulam</a></h5>
+           <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Ernakulam</a></h5>
            <p class="card-text">Ernakulam is known as 'The Queen of the Arabian Sea'.</p>
          </div>
        </div>
@@ -180,7 +194,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="#" class="card-title btn btn-success">Thrissur</a></h5>
+           <h5><a href="#" class="card-title btn btn-outline-dark"style="color:white;">Thrissur</a></h5>
            <p class="card-text">Thrissur is the 'Cultural Capital of Kerala'.</p>
          </div>
        </div>
@@ -195,7 +209,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="#" class="card-title btn btn-success">Palakkad</a></h5>
+           <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Palakkad</a></h5>
            <p class="card-text">Palakkad is known as 'The Granary of Kerala'.</p>
          </div>
        </div>
@@ -208,7 +222,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="#" class="card-title btn btn-success">Malappuram</a></h5>
+           <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Malappuram</a></h5>
            <p class="card-text">Malappuram literally means 'hilltop' or 'terraced place above the hill'</p>
          </div>
        </div>
@@ -223,7 +237,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-          <h5><a href="#" class="card-title btn btn-success">Kozhikode</a></h5>
+          <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Kozhikode</a></h5>
           <p class="card-text">Kozhikode is reffered as 'City of Spices'.</p>
         </div>
        </div>
@@ -236,7 +250,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-           <h5><a href="./wayanad.html" class="card-title btn btn-success">Wayanad</a></h5>
+           <h5><a href="./wayanad.html" class="card-title btn btn-outline-dark" style="color:white;">Wayanad</a></h5>
            <p class="card-text">Wayanad is referred as 'The Land of Paddy Fields'.</p>
          </div>
        </div>
@@ -251,7 +265,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-          <h5><a href="#" class="card-title btn btn-success">Kannur</a></h5>
+          <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Kannur</a></h5>
           <p class="card-text">Kannur is 'The City of Looms and Lores'.</p>
          </div>
        </div>
@@ -264,7 +278,7 @@
        </div>
        <div class="col-md-5">
          <div class="card-body">
-          <h5><a href="#" class="card-title btn btn-success">Kasargod</a></h5>
+          <h5><a href="#" class="card-title btn btn-outline-dark" style="color:white;">Kasargod</a></h5>
            <p class="card-text">Kasaragod is known as 'The Land of Gods & Rivers'.</p>
          </div>
        </div>
