@@ -20,14 +20,27 @@ body{
 .carousel-content {
   position: absolute;
   text-align: right;
-  font-size: 40px;
-  font-weight: 600;
-  bottom: 60%;
-  left: 50%;
+  font-size: 30px;
+  font-weight: 500;
+  bottom: 40%;
+  left: 60%;
   z-index: 20;
-  color: white;
-  text-shadow: 4px 4px 2px black;
-
+  /* color: white;
+  text-shadow: 4px 4px 2px black; */
+  margin-top: 150px;
+  /* color: black; */
+  /* text-shadow: 0 0 5px #fff,
+               0 0 10px #fff, 
+               0 0 20px rgb(87, 0, 128), 
+               0 0 30px rgb(117, 0, 128), 
+               0 0 40px rgb(128, 0, 111), 
+               0 0 55px rgb(128, 0, 90), 
+               0 0 70px rgb(128, 0, 38); */
+  /* background-color: white; */
+               animation-name: example1;
+               animation-name: example2;
+               animation-duration: 5s;
+               animation-iteration-count: infinite;
 }
 
 input placeholder { 
@@ -69,18 +82,25 @@ ul{
   list-style-type: square;
 }
 
-/* @keyframes example {
-  from {background-color: rgb(217, 209, 240)}
-  to {background-color:  rgb(33, 55, 155);}
+@keyframes example {
+  from {background-color: rgb(170, 217, 237);}
+  to {background-color:  rgb(217, 209, 240);}
 } 
 body{animation-timing-function: ease-in-out;}
 /* The element to apply the animation to */
-/* body{
+body{
 background-color: white;
 animation-name: example;
 animation-duration: 5s;
 animation-iteration-count: infinite;
-} */ 
-
+} 
+/* @keyframes example1 {
+  from {color: rgb(23, 57, 71);}
+  to {color:  rgb(240, 209, 209);}
+}  */
+@keyframes example2 {
+  from {text-shadow:  0 20px rgb(87, 0, 128)}
+  to {text-shadow:0 0 30px rgb(128, 0, 38);}
+} 
 
 
