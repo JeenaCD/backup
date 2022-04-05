@@ -107,10 +107,6 @@ animation-name: example;
 animation-duration: 5s;
 animation-iteration-count: infinite;
 } 
-/* @keyframes example1 {
-  from {color: rgb(23, 57, 71);}
-  to {color:  rgb(240, 209, 209);}
-}  */
 @keyframes example2 {
   from {text-shadow:  0 20px rgb(87, 0, 128)}
   to {text-shadow:0 0 30px rgb(128, 0, 38);}
