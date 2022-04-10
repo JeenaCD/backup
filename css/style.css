@@ -164,3 +164,36 @@ img:nth-child(3) {
 img:nth-child(4) {
   animation-delay: 0s;
 }
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear {
+  display: none;
+} 
+
+.success input, .success input:focus{
+  border:2px solid green;
+  outline:none;
+}
+
+.fail input, .fail input:focus{
+  border:2px solid red;
+  outline:none;
+}
+.success #icons i.fa-check-circle{
+  color: green;
+  visibility: visible;
+}
+.fail #icons i.fa-exclamation-circle{
+  color: red;
+  visibility: visible;
+}
+.success,.fail{
+  position: relative;
+}
+
+#icons i{
+  position: absolute;
+  right:25px;
+  top: 30px; 
+  visibility: hidden;
+}

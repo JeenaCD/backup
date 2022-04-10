@@ -62,30 +62,54 @@
 
 <!-- signup form starts here -->
 
-<div class="container-fluid vh-100" style="margin-top:100px">
+<div class="container-fluid vh-75" style="margin-top:100px">
   <div class="" style="margin-top:150px">
       <div class="rounded d-flex justify-content-center">
           <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
               <div class="text-center">
                   <h3 class="text" style="color: rgb(33, 55, 155);">Sign Up</h3>
               </div>
-              <form>
-                <div class="form-group">
-                <label>Your Name</label>
-                <input name="" class="form-control" placeholder="Name" type="text">
+              <form action="./signupvalidated.html" onclick=" return signupvalidate()">
+                <div id="userfield" >
+                <label>Your Name</label><br>
+                <input name="Your Name" autocomplete="off" placeholder="Name" type="text" style="width: 100%;" id="uservalue" onkeyup="username()">
+                <span id="icons">
+                  <i class="fa fa-check-circle"></i>
+                  <i class="fa fa-exclamation-circle"></i>
+                </span>
                 </div><br>
-                <div class="form-group">
-                <label>Your Email</label>
-                <input name="" class="form-control" placeholder="Email" type="Email">
+                <div id="emailfield">
+                <label>Your Email</label><br>
+                <input name="Email" autocomplete="off" placeholder="Email" type="Email" style="width:100%" id="emailvalue" onkeyup="email()">
+                <span id="icons">
+                  <i class="fa fa-check-circle"></i>
+                  <i class="fa fa-exclamation-circle"></i>
+                </span>
                 </div><br> 
-                <div class="form-group">
-                <label>Your password</label>
-                <input class="form-control" placeholder="******" type="password">
-                </div> <br> 
-                <div class="form-group">
-                <label>ReType Your password</label>
-                <input class="form-control" placeholder="******" type="password">
-                </div> <br> 
+                <div id="phonefield">
+                  <label>Your Phone Number</label><br>
+                  <input name="Phone num" autocomplete="off" placeholder="Phone Number" type="text" style="width:100%" id="phonevalue" onkeyup="phonenumber()">
+                  <span id="icons">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                  </span>
+                  </div><br>
+                  <div id="passfield">
+                    <label>Your Password</label><br>
+                    <input name="Password" autocomplete="off" placeholder="Password" type="password" style="width:100%" id="passvalue" onkeyup="password()">
+                    <span id="icons">
+                      <i class="fa fa-check-circle"></i>
+                      <i class="fa fa-exclamation-circle"></i>
+                    </span>
+                    </div><br>
+                    <div id="cpassfield">
+                      <label>Confirm Password</label><br>
+                      <input name="Password" autocomplete="off" placeholder="Confirm Password" type="password" style="width:100%" id="cpassvalue" onkeyup="cpassword()">
+                      <span id="icons">
+                        <i class="fa fa-check-circle"></i>
+                        <i class="fa fa-exclamation-circle"></i>
+                      </span>
+                      </div><br> 
                 <div class="form-group"> 
                 <div class="checkbox">
                   <label> <input type="checkbox"> Remember Me</label>
@@ -101,7 +125,7 @@
 </div>
 <!-- sign up form ends here -->
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-gradient" style="background-color: rgb(33, 55, 155)">
+  <footer class="text-center text-lg-start bg-gradient" style="background-color: rgb(33, 55, 155)">
   <!-- Section: Social media -->
   <section
     class="d-flex justify-content-center justify-content-lg-between border-bottom " style="color: black;"
@@ -191,5 +215,6 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+<script src="./script.js"></script>
 </body>
 </html>

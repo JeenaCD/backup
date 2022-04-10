@@ -70,16 +70,24 @@
               <div class="text-center">
                   <h3 style="color: rgb(33, 55, 155);"> Sign In</h3>
               </div>
-              <form>
-                <div class="form-group">
-                  <label>Username</label>
-                  <input name="" class="form-control" placeholder="Username" type="text">
-                </div><br> 
-                <div class="form-group">
-                  <label>Your password</label>
-                  <input class="form-control" placeholder="******" type="password">
-                </div> <br> 
-                <div class="form-group"> 
+              <form action="./loginvalidated.html" onclick=" return loginvalidate()">
+                <div id="emailfield">
+                  <label>Your Email</label><br>
+                  <input name="Email" autocomplete="off" placeholder="Email" type="Email" style="width:100%" id="emailvalue" onkeyup="email()">
+                  <span id="icons">
+                    <i class="fa fa-check-circle"></i>
+                    <i class="fa fa-exclamation-circle"></i>
+                  </span>
+                  </div><br> 
+                  <div id="passfield">
+                    <label>Your Password</label><br>
+                    <input name="Password" autocomplete="off" placeholder="Password" type="password" style="width:100%" id="passvalue" onkeyup="password()">
+                    <span id="icons">
+                      <i class="fa fa-check-circle"></i>
+                      <i class="fa fa-exclamation-circle"></i>
+                    </span>
+                    </div><br>
+                  <div class="form-group"> 
                   <div class="checkbox">
                     <label> <input type="checkbox"> Remember Me</label>
                   </div> 
@@ -185,5 +193,6 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+<script src="./script.js"></script>
 </body>
 </html>
