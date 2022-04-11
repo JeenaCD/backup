@@ -18,14 +18,13 @@
 var us,em,pn,ps,cps;
 function username(){
     var a=document.getElementById('uservalue').value;
-    var b=/^([A-Za-z]+)((\s)?[A-Za-z]*)((\s)?[A-Za-z]*)$/;
-    if(b.test(a)){
-        document.querySelector("#userfield").classList="success";
-        us = 1;
+    if(a==""){
+        document.querySelector("#userfield").classList="fail";
+        us = 0;
     }
     else{
-    document.querySelector("#userfield").classList="fail";
-    us=0;
+    document.querySelector("#userfield").classList="success";
+    us=1;
     }
 }
 
@@ -104,6 +103,153 @@ function loginvalidate(){
     else
     return false;
 }
+// var parameters ={
+//     count : false,
+//     letters : false,
+//     numbers : false,
+//     special: false,
+// };
+// var strengthbar=document.getElementById('strength-bar');
+// var msg=document.getElementById('msg');
+
+// function strengthchecker(){
+//  let password=document.getElementById('passvalue').value;
+//  parameters.letters = (/[A-Za-z]+/.test(password))?true : false;
+//  parameters.numbers = (/[0-9]+/.test(password))?true : false;
+//  parameters.special =(/[!\"$%&/()=?@~`\\.\':;+=^*-_]+/.test(password))?true : false;
+//  parameters.count = (password.length>7)?true : false;
+//  let barlength = Object.values(parameters).filter(value=>value);
+//  console.log(Object.values(parameters),barlength);
+//  strengthbar.innerHTML ="";
+//  for( let i in barlength){
+//      let span=document.createElement("span");
+//      span.classList.add("strength");
+//      strengthbar.appendChild(span);
+//  }
+//  let spanref=document.getElementsByClassName('strength');
+//  console.log(spanref);
+//  for(let i=0 ; i<spanref.length ; i++){
+//     switch(spanref.length-1){
+//         case 0: spanref[i].style.background= "#ff3e36";
+//                 msg.textContent="ur password is very weak";
+//                 break;
+//         case 1: spanref[i].style.background= "#ff891f";
+//                 msg.textContent="ur password is weak";
+//                 break;
+//         case 2: spanref[i].style.background= "#ffda36";
+//                 msg.textContent="ur password is strong";
+//                 break;
+//         case 3: spanref[i].style.background= "#0be881";
+//                 msg.textContent="ur password is very strong";
+//                 break;
+//     }
+//  }
+
+// }
+
+let passwordInput = document.querySelector('#passfield input[type="password"]');
+let passwordStrength= document.getElementById('passwordStrength');
+let poor = document.querySelector('#passwordStrength #poor');
+let weak = document.querySelector('#passwordStrength #weak');
+let strong = document.querySelector('#passwordStrength #strong');
+let passwordInfo = document.getElementById('passwordInfo');
+
+let poorRegExp = /[a-z]/;
+let weakRegExp = /(?=.*?[0-9])/;;
+let strongRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+let whitespaceRegExp = /^$|\s+/;
+
+function strengthchecker(){
+
+     let passwordValue= passwordInput.value;
+     let passwordLength= passwordValue.length;
+
+     let poorPassword= passwordValue.match(poorRegExp);
+     let weakPassword= passwordValue.match(weakRegExp);
+     let strongPassword= passwordValue.match(strongRegExp);
+     let whitespace= passwordValue.match(whitespaceRegExp);
+
+if(passwordValue != ""){
+
+ passwordStrength.style.display = "block";
+ passwordStrength.style.display = "flex";
+ passwordInfo.style.display = "block";
+ passwordInfo.style.color = "black";
+
+ if(whitespace)
+ {
+  passwordInfo.textContent = "whitespaces are not allowed";
+ }else{
+ poorPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword);
+ weakPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword);
+ strongPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword);
+}
+
  
+}else{
+ 
+ passwordStrength.style.display = "none";
+ passwordInfo.style.display = "none";
+
+}
+}
+
+function poorPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword){
+
+  if(passwordLength <= 3 && (poorPassword || weakPassword || strongPassword))
+    {
+   poor.classList.add("active");
+   passwordInfo.style.display = "block";
+   passwordInfo.style.color = "red";
+   passwordInfo.textContent = "Your password is too Poor";
+      
+    }
+}
+
+function weakPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword){
+if(passwordLength>= 4 && poorPassword && (weakPassword || strongPassword))
+{
+ weak.classList.add("active");
+ passwordInfo.textContent = "Your password is Weak";
+ passwordInfo.style.color = "orange";
+
+}else{
+ weak.classList.remove("active");
+ 
+}
+}
+
+function strongPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword){
+
+if(passwordLength >= 7 && (poorPassword && weakPassword) && strongPassword)
+{
+ poor.classList.add("active");
+ weak.classList.add("active");
+ strong.classList.add("active");
+ passwordInfo.textContent = "Your password is strong";
+ passwordInfo.style.color = "green";
+}else{
+ strong.classList.remove("active");
+ 
+}
+}
+
+let showHide = document.querySelector('#passfield #showHide');
+
+showHide.onclick = function(){
+  showHidePassword()
+}
+
+function showHidePassword(){
+if(passfield.type == "password"){
+passfield.type = "text";
+showHide.textContent = "HIDE";
+showHide.style.color = "green";
+}else{
+passfield.type = "password";
+showHide.textContent = "SHOW";
+showHide.style.color = "red";
+}
+}
 
 
