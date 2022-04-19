@@ -73,7 +73,8 @@
               <form action="./loginvalidated.html" onclick=" return loginvalidate()">
                 <div id="emailfield">
                   <label>Your Email</label><br>
-                  <input name="Email" autocomplete="off" placeholder="Email" type="Email" style="width:100%" id="emailvalue" onkeyup="email()">
+                  <input name="Email" autocomplete="off" placeholder="Email" type="Email" style="width:100%" 
+                  id="emailvalue" onkeyup="email()">
                   <span id="icons">
                     <i class="fa fa-check-circle"></i>
                     <i class="fa fa-exclamation-circle"></i>
@@ -81,11 +82,17 @@
                   </div><br> 
                   <div id="passfield">
                     <label>Your Password</label><br>
-                    <input name="Password" autocomplete="off" placeholder="Password" type="password" style="width:100%" id="passvalue" onkeyup="password()">
+                    <input name="Password" autocomplete="off" placeholder="Password" type="password" 
+                    style="width:95%" id="passvalue" onkeyup="password()">
                     <span id="icons">
                       <i class="fa fa-check-circle"></i>
                       <i class="fa fa-exclamation-circle"></i>
                     </span>
+                    <span class="input-group-append">  
+                      <button type="button" style="border:hidden; color: rgb(68, 90, 185);" onclick="Toggle1() " >  
+                       <i id="password-eye1" class="fa fa-eye"></i>
+                    </button>
+                     </span> 
                     </div><br>
                   <div class="form-group"> 
                   <div class="checkbox">
