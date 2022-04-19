@@ -231,7 +231,7 @@ border-radius: 5px;
 #passwordStrength span#poor:before{
 background-color: #ff4757;
 }
-#passwordStrength span#weak:before{
+#passwordStrength span#medium:before{
 background-color: orange;
 }
 #passwordStrength span#strong:before{
@@ -251,7 +251,7 @@ font-style: italic;
 #passwordInfo #poor{
 color: red;
 }
-#passwordInfo #weak{
+#passwordInfo #medium{
 color: orange;
 }
 #passwordInfo #strong{

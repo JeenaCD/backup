@@ -103,14 +103,14 @@ function loginvalidate(){
 let passwordInput = document.querySelector('#passfield input[type="password"]');
 let passwordStrength= document.getElementById('passwordStrength');
 let poor = document.querySelector('#passwordStrength #poor');
-let weak = document.querySelector('#passwordStrength #weak');
+let medium = document.querySelector('#passwordStrength #medium');
 let strong = document.querySelector('#passwordStrength #strong');
 let passwordInfo = document.getElementById('passwordInfo');
 
 
-// Regular Expression for poor password, weak password and strong password
+// Regular Expression for poor password, medium password and strong password
 let poorRegExp = /[a-z]/;
-let weakRegExp = /(?=.*?[0-9])/;;
+let mediumRegExp = /(?=.*?[0-9])/;;
 let strongRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 let whitespaceRegExp = /^$|\s+/;
 
@@ -119,7 +119,7 @@ function strengthchecker(){
             let passwordValue= passwordInput.value;
             let passwordLength= passwordValue.length;
             let poorPassword= passwordValue.match(poorRegExp);
-            let weakPassword= passwordValue.match(weakRegExp);
+            let mediumPassword= passwordValue.match(mediumRegExp);
             let strongPassword= passwordValue.match(strongRegExp);
             let whitespace= passwordValue.match(whitespaceRegExp);
             
@@ -131,9 +131,9 @@ function strengthchecker(){
                 if(whitespace){
                     passwordInfo.textContent = "whitespaces are not allowed";
                 }else{
-                    poorPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword);
-                    weakPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword);
-                    strongPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword);
+                    poorPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
+                    mediumPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
+                    strongPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
                 }
             }else{
                 passwordStrength.style.display = "none";
@@ -142,8 +142,8 @@ function strengthchecker(){
 }
         
 // checking for poor password
-function poorPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword){
-        if(passwordLength <= 3 && (poorPassword || weakPassword || strongPassword)){
+function poorPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword){
+        if(passwordLength <= 3 && (poorPassword || mediumPassword || strongPassword)){
             poor.classList.add("active");
             passwordInfo.style.display = "block";
             passwordInfo.style.color = "red";
@@ -151,27 +151,32 @@ function poorPasswordStrength(passwordLength, poorPassword, weakPassword, strong
         }
 }
 
-// checking for weak password
-function weakPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword){
-        if(passwordLength>= 4 && poorPassword && (weakPassword || strongPassword))
+// checking for medium password
+function mediumPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword){
+        if(passwordLength>= 4 && poorPassword && (mediumPassword || strongPassword))
         {
             poor.classList.remove("active");
-            weak.classList.add("active");
-            passwordInfo.textContent = "Your password is Weak";
+            medium.classList.add("active");
+            passwordInfo.textContent = "Your password is Medium";
             passwordInfo.style.color = "orange";
-        }
+        }else{
+            medium.classList.remove("active");
+            
+    }
 }
 
 // checking for strong password
-function strongPasswordStrength(passwordLength, poorPassword, weakPassword, strongPassword){
-        if(passwordLength >= 7 && (poorPassword && weakPassword) && strongPassword)
+function strongPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword){
+        if(passwordLength >= 7 && (poorPassword && mediumPassword) && strongPassword)
         {
             poor.classList.remove("active");
-            weak.classList.remove("active");
+            medium.classList.remove("active");
             strong.classList.add("active");
             passwordInfo.textContent = "Your password is strong";
             passwordInfo.style.color = "green";
-        }
+        }else{
+            strong.classList.remove("active");            
+    }
 }
 
 
