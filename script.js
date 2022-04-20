@@ -129,7 +129,9 @@ function strengthchecker(){
                 passwordInfo.style.display = "block";
                 passwordInfo.style.color = "black";
                  if(whitespace){
-                     passwordInfo.textContent = "Whitespaces are not allowed";
+                    passwordInfo.style.display = "block";
+                    passwordInfo.style.color = "indigo";
+                    passwordInfo.textContent = "Whitespaces are not allowed";
                  }else{
                     poorPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
                     mediumPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
