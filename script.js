@@ -45,7 +45,7 @@ function phonenumber(){
 // Password validation
 function password(){
     var g=document.getElementById('passvalue').value;
-    var h= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    var h = /^((?!.*[\s])(?=.*[A-Z])(?=.*\d).{8,})$/;
     if(h.test(g)){
         document.querySelector("#passfield").classList="success";
         ps = 1;
@@ -60,7 +60,7 @@ function password(){
 function cpassword(){
     var p=document.getElementById('passvalue').value;
     var i=document.getElementById('cpassvalue').value;
-    var j= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    var j= /^((?!.*[\s])(?=.*[A-Z])(?=.*\d).{8,})$/;
     if(j.test(i)&& p==i ){
         document.querySelector("#cpassfield").classList="success";
         cps = 1;
@@ -110,8 +110,8 @@ let passwordInfo = document.getElementById('passwordInfo');
 
 // Regular Expression for poor password, medium password and strong password
 let poorRegExp = /[a-z]/;
-let mediumRegExp = /(?=.*?[0-9])/;;
-let strongRegExp = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+let mediumRegExp = /(?=.*?[0-9])/;
+let strongRegExp = /^((?!.*[\s])(?=.*[A-Z])(?=.*\d).{8,})$/;
 let whitespaceRegExp = /^$|\s+/;
 
 // Checking password strength
@@ -128,14 +128,15 @@ function strengthchecker(){
                 passwordStrength.style.display = "flex";
                 passwordInfo.style.display = "block";
                 passwordInfo.style.color = "black";
-                if(whitespace){
-                    passwordInfo.textContent = "whitespaces are not allowed";
-                }else{
+                 if(whitespace){
+                     passwordInfo.textContent = "Whitespaces are not allowed";
+                 }else{
                     poorPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
                     mediumPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
                     strongPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
-                }
-            }else{
+                 }
+            }
+            else{
                 passwordStrength.style.display = "none";
                 passwordInfo.style.display = "none";
             }
