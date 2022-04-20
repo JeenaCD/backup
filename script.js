@@ -116,7 +116,7 @@ let whitespaceRegExp = /^$|\s+/;
 
 // Checking password strength
 function strengthchecker(){
-            let passwordValue= passwordInput.value;
+            let passwordValue= passvalue.value;
             let passwordLength= passwordValue.length;
             let poorPassword= passwordValue.match(poorRegExp);
             let mediumPassword= passwordValue.match(mediumRegExp);
@@ -129,7 +129,6 @@ function strengthchecker(){
                 passwordInfo.style.display = "block";
                 passwordInfo.style.color = "black";
                  if(whitespace){
-                    passwordInfo.style.display = "block";
                     passwordInfo.style.color = "indigo";
                     passwordInfo.textContent = "Whitespaces are not allowed";
                  }else{
