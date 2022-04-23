@@ -205,58 +205,15 @@ input[type=password]::-ms-clear {
   right: 10px; 
   top: 25px; 
 }
-#passwordStrength{
-  width: 33%;
-  height: 5px;
-  margin: 5px 0;
-  display: none; 
-}
-#passwordStrength span{
-position: relative;
-height: 100%;
-width: 100%;
-background: white;
-border-radius: 5px;
-}
 
-#passwordStrength span.active:before{
-position: absolute;
-content: '';
-top: 0;
-left: 0;
-height: 100%;
-width: 100%;
-border-radius: 5px;
-}
-#passwordStrength span#poor:before{
-background-color: #ff4757;
-}
-#passwordStrength span#medium:before{
-background-color: orange;
-}
-#passwordStrength span#strong:before{
-background-color: #23ad5c;
-}
+
 #passwordInfo{
 text-align: center;
 font-size: 20px;
 font-style: italic;
+width:100%;
 }
 
-#feedback{
-  text-align: center;
-  font-size: 20px;
-  font-style: italic;
-}
-#passwordInfo #poor{
-color: red;
-}
-#passwordInfo #medium{
-color: orange;
-}
-#passwordInfo #strong{
-color: green;
-}
 #phonereq{
   text-align: justify;
   font-size: smaller;

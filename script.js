@@ -105,6 +105,7 @@ let strong = document.querySelector('#passwordStrength #strong');
 let passwordInfo = document.getElementById('passwordInfo');
 
 
+
 // Regular Expression for poor password, medium password and strong password
 let poorRegExp = /[a-z]/;
 let mediumRegExp = /(?=.*?[0-9])/;
@@ -119,31 +120,37 @@ function strengthchecker(){
             let mediumPassword= passwordValue.match(mediumRegExp);
             let strongPassword= passwordValue.match(strongRegExp);
             let whitespace= passwordValue.match(whitespaceRegExp);
+            let strength =document.getElementById("strength");
             
             if(passwordValue != ""){
-                passwordStrength.style.display = "block";
-                passwordStrength.style.display = "flex";
+                strength.style.display = "block";
+                strength.style.display = "flex";
                 passwordInfo.style.display = "block";
                 passwordInfo.style.color = "black";
                  if(whitespace){
                     passwordInfo.style.color = "indigo";
                     passwordInfo.textContent = "Whitespaces are not allowed";
-                 }else{
-                    poorPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
-                    mediumPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
+                 }
+                 
+                 else{
+                    poorPasswordStrength(poorPassword, mediumPassword, strongPassword);
+                    mediumPasswordStrength(poorPassword, mediumPassword, strongPassword);
                     strongPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword);
                  }
             }
             else{
-                passwordStrength.style.display = "none";
+                strength.style.display = "none";
                 passwordInfo.style.display = "none";
             }
 }
         
 // checking for poor password
-function poorPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword){
-        if(passwordLength <= 3 && (poorPassword || mediumPassword || strongPassword)){
-            poor.classList.add("active");
+function poorPasswordStrength(poorPassword, mediumPassword, strongPassword){
+        if(poorPassword || mediumPassword || strongPassword){
+            strength.style.display = "block";
+            strength.style.width = "33%";
+            strength.style.color="red";
+            strength.style.backgroundColor="red";
             passwordInfo.style.display = "block";
             passwordInfo.style.color = "red";
             passwordInfo.textContent = "Your password is too Poor";
@@ -151,31 +158,29 @@ function poorPasswordStrength(passwordLength, poorPassword, mediumPassword, stro
 }
 
 // checking for medium password
-function mediumPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword){
-        if(passwordLength>= 4 && poorPassword && (mediumPassword || strongPassword))
+function mediumPasswordStrength(poorPassword, mediumPassword, strongPassword){
+        if(poorPassword && (mediumPassword || strongPassword))
         {
-            poor.classList.remove("active");
-            medium.classList.add("active");
+            strength.style.display = "block";
+            strength.style.width = "66%";
+            strength.style.color="orange";
+            strength.style.backgroundColor="orange";
             passwordInfo.textContent = "Your password is Medium";
             passwordInfo.style.color = "orange";
-        }else{
-            medium.classList.remove("active");
-            
-    }
+        }
 }
 
 // checking for strong password
 function strongPasswordStrength(passwordLength, poorPassword, mediumPassword, strongPassword){
         if(passwordLength >= 7 && (poorPassword && mediumPassword) && strongPassword)
         {
-            poor.classList.remove("active");
-            medium.classList.remove("active");
-            strong.classList.add("active");
+            strength.style.display = "block";
+            strength.style.width = "100%";
+            strength.style.color="green";
+            strength.style.backgroundColor="green";
             passwordInfo.textContent = "Your password is strong";
             passwordInfo.style.color = "green";
-        }else{
-            strong.classList.remove("active");            
-    }
+        }
 }
 
 
