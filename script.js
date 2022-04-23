@@ -30,6 +30,7 @@ function email(){
 
 // Phone number validation
 function phonenumber(){
+    document.getElementById("phonereq").innerHTML="Must have 10 numbers and be in any of these 3 formats: XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX";
     var e=document.getElementById('phonevalue').value;
     var f=/^([\w]{0}[\d]{10})$|^([\w]{0}[\d]{3}[\.][\d]{3}[\.][\d]{4})$|^([\w]{0}[\d]{3}[\-][\d]{3}[\-][\d]{4})$|^([\w]{0}[\d]{3}[\s][\d]{3}[\s][\d]{4})$/;
     if(f.test(e)){
@@ -46,6 +47,7 @@ function phonenumber(){
 function password(){
     var g=document.getElementById('passvalue').value;
     var h = /^((?!.*[\s])(?=.*[A-Z])(?=.*\d).{8,})$/;
+    document.getElementById("passreq").innerHTML="Contains atleast 8 characters, one Upper case, one Lower case and one Number";
     if(h.test(g)){
         document.querySelector("#passfield").classList="success";
         ps = 1;
@@ -74,19 +76,14 @@ function cpassword(){
 
 // validating signup form
 function signupvalidate(){
-        if(us==1 && em== 1){
-        if(pn==1 && ps==1){
-            if(cps==1){
+    
+    if(us==1 && em== 1 && pn==1 && ps==1 && cps==1){
             return true;
             }
             else
+            {
             return false;
             }
-    else
-    return false;
-    }
-    else 
-    return false;
 }
 
 

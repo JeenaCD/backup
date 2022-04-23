@@ -257,3 +257,13 @@ color: orange;
 #passwordInfo #strong{
 color: green;
 }
+#phonereq{
+  text-align: justify;
+  font-size: smaller;
+  color: rgb(68, 90, 185);
+}
+#passreq{
+  text-align: justify;
+  font-size: smaller;
+  color: rgb(68, 90, 185);
+}
