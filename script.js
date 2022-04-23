@@ -98,14 +98,7 @@ function loginvalidate(){
 
 
 let passwordInput = document.querySelector('#passfield input[type="password"]');
-let passwordStrength= document.getElementById('passwordStrength');
-let poor = document.querySelector('#passwordStrength #poor');
-let medium = document.querySelector('#passwordStrength #medium');
-let strong = document.querySelector('#passwordStrength #strong');
 let passwordInfo = document.getElementById('passwordInfo');
-
-
-
 // Regular Expression for poor password, medium password and strong password
 let poorRegExp = /[a-z]/;
 let mediumRegExp = /(?=.*?[0-9])/;
